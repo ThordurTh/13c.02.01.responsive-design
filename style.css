@@ -1,0 +1,484 @@
+/* Tip, copy paste from 13c.01.01 & 13c.01.02 to get fonts and colors up and running ... */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-h: 'Raleway', sans-serif;
+    --font-p: 'Cabin', sans-serif;
+    --color1: #5c99ba;
+    --color2: #f5f4e5;
+    --color3: #9DCE93;
+    --color4: #9ed4bb;
+    --color5: #a0d5d3;
+    --color6: #a3d6eb;
+    --color7: rgb(30, 30, 30);
+    --color8: rgb(46, 46, 46);
+
+}
+
+/* Fonts */
+html {
+    font-size: 100%; /*16px*/
+}
+  
+body {
+    font-weight: 400;
+    line-height: 1.75;
+    color: #000000;
+    font-family: var(--font-p);
+    background-color: var(--color3);
+
+}
+  
+h1, h2, h3, h4 {
+    font-family: var(--font-h);
+    margin: 2rem 0 0.9rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+  
+h1 {
+    margin-top: 0;
+    font-size: 3.052rem;
+}
+  
+h2 {
+    font-size: 2.441rem;
+}
+  
+h3 {
+    font-size: 1.953rem;
+}
+  
+h4 {
+    font-size: 1.563rem;
+}
+  
+h5 {
+    font-size: 1.25rem;
+}
+  
+p {
+    font-family: var(--font-p);
+    color: var(--color8);
+}
+  
+a {
+    color: var(--color-lighter); /*NEEDS CHANGE*/
+    font-family: var(--font-p);
+}
+  
+button {
+    all: unset;
+    padding: 0.5rem 2rem;
+    background-color: rgb(92, 153, 186);
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+}
+
+section {
+    padding-bottom: 3rem;
+}
+
+.back_button {
+    background-color: #282C2E;
+    color: #F7F8F8;
+    position: fixed;
+    width: 100%;
+    padding: 0.25rem 0 0.25rem 1rem;
+    box-shadow: 1px 1px 10px black;
+    z-index: 100;
+}
+
+.back_button a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* SECTIONS */
+
+/* NAV */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3.5rem 1rem 1rem;
+    align-items: center;
+
+}
+
+nav .logo {
+    margin-right: auto;
+}
+
+nav ul  {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+
+nav .burger {
+    visibility: hidden;
+}
+
+nav a {
+    text-decoration: none;
+}
+/*//////////////////////////////////////////////*/
+/*/////////////----- HEADER -----///////////////*/
+/*//////////////////////////////////////////////*/
+header {
+    
+    background-image: url(https://images.unsplash.com/photo-1600968148775-9eac9f690c43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Zm9ycmVzdHx8fHx8fDE2NjU2NTkyMTM&ixlib=rb-1.2.1&q=80&w=1080);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    color: var(--color2);
+}
+
+header h1 {
+    text-shadow: 1px 1px 10px black;
+}
+
+header p {
+    width: 55%;
+    color: var(--color2);
+    padding-bottom: 1rem;
+}
+
+nav {
+    background-color: var(--color3);
+    color: var(--color7);
+    font-size: 1rem;
+    /* border-bottom: 2px solid var(--color2); */
+}
+
+/*---------- SECTION #advantages ----------*/
+#advantages {
+    background-color: var(--color2);
+    padding: 1rem;
+    padding-bottom: 3rem;
+}
+
+.advantages_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    grid-gap: 1.5rem;
+    row-gap: 2rem;
+}
+
+.advantages_card {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    background-color: var(--color3);
+    box-shadow: 1px 1px 20px rgb(43, 66, 71);
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.advantages_card_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.8rem 0.8rem 1.6rem;
+    color: var(--color7);
+}
+
+.advantages_card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 3px 3px 0 0 ;
+}
+
+.advantages_card span {
+    position: absolute;
+    bottom: -6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    min-width: 150px;
+    border-radius: 50px;
+    padding: 0.3rem 2rem 0.2rem;
+    background-color: rgb(92, 153, 186);
+    color: white;
+}
+
+/*---------- SECTION #product ----------/*/
+#product {
+    background-color: var(--color3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 1rem; */
+    padding-bottom: 0;
+}
+
+#product h2 {
+    grid-column: 1/3;
+    padding: 0 1rem;
+}
+
+#product .product_graphics img {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+}
+
+#product .product_text {
+    background-color: var(--color3);
+    padding: 0 1rem 1rem;
+}
+
+/*------------- SECTION #highlight ----------*/
+#highlight {
+    background-color: var(--color2);
+    padding: 1rem;
+}
+
+#highlight .highlight_small_cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.highlight_small_card {
+    width: 20rem;
+    box-shadow: 1px 1px 40px rgb(158, 172, 175);
+    border-radius: 5px;
+    
+}
+
+.highlight_small_card img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+#highlight .highlight_button {
+   display: flex;
+   justify-content: center;
+   padding: 2rem 0 1rem;
+}
+
+#highlight .highlight_small_card_text {
+    padding: 1rem;
+}
+
+#highlight button {
+    
+}
+
+/*---------- SECTION #team ----------*/
+#team {
+    background-color: var(--color3);
+    height: 100%;
+}
+
+#team h2 {
+    padding: 0 1rem; 
+}
+
+#team .team_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    /* gap: 1rem; */
+    /* padding: 1rem; */
+    /* height: 100%; */
+    width: 100%;
+}
+
+#team .team_wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    grid-area: 1/2/2/ 2;
+}
+
+#team .team_members {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* width: 50vw; */
+    /* height: 100%; */
+    padding: 2rem 1rem 3rem;
+    background-color: rgb(157, 206, 147);
+}
+
+#team .team_member {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+#team .team_text {
+}
+
+#team .team_members img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1000px;
+    object-fit: cover;
+    
+
+}
+
+/*---------- SECTION #contact ----------*/
+#contact {
+    
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    background-color: var(--color5);
+    min-height: 20rem;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    padding: 3rem 0 0;
+}
+
+#contact .contact_text {
+    padding: 1rem;
+    width: 40vw;
+}
+
+#contact_form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    background-color: beige;
+    padding: 3rem 1rem;
+    width: 80%; 
+    border-radius: 20px 0 0 0;
+}
+
+/* #contact .name {
+    grid-area: 1/1/ span 1/ span 1;
+}
+
+#contact .email {
+    grid-area: 2/1/ span 1/ span 1;
+}*/
+
+#contact .message {
+    grid-area: 2/1/ span 1/ span 2;
+
+}
+
+#contact .submit {
+    grid-area: 3/1/ span 1/ span 2;
+    width: 100%;
+}  
+
+#contact .submit button {
+    width: 8rem;
+    margin: 0 auto;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*---------- FOOTER ----------*/
+footer {
+    background-color: var(--color3);
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 3rem;
+    flex-wrap: wrap;
+
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer section {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: 0 4rem;
+}
+
+
+/* TABLET */
+@media screen and (max-width: 810px) {
+    
+}
+
+/* MOBILE */
+@media screen and (max-width: 375px) {
+    header h1 {
+        font-size: 2.441rem;
+    }
+}
+/*Custom*/
+
+@media screen and (max-width: 550px) {
+
+    #product {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #team .team_wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact {
+        flex-direction: column;
+    }
+
+    #contact .contact_text {
+        width: 100vw;
+    }
+
+    #contact form {
+        width: 100%;
+        border-radius: 20px 20px 0 0 ;
+    }
+
+    #contact input {
+        width: 100%;
+    }
+
+    nav ul, nav button {
+        display: none;
+    }
+
+    nav .burger {
+        visibility: visible;
+    }
+
+    nav .burger a {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    nav .burger span {
+        width: 1.5rem;
+        border-bottom: 4px solid black;
+        border-radius: 30px;
+    }
+}
